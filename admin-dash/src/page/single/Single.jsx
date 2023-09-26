@@ -1,9 +1,9 @@
 import React from 'react';
-import './home.scss';
+import './single.scss';
 
 const Single = () => {
   return (
-    <div className="home">
+    <div className="single">
       <h1>Single</h1>
     </div>
   );
