@@ -1,10 +1,17 @@
 import React from 'react';
 import './list.scss';
+import Sidebar from '../../components/sidebar/Sidebar';
+import Navbar from '../../components/navbar/Navbar';
+import Datatable from '../../components/datatable/Datatable';
 
 const List = () => {
   return (
-    <div className="List">
-      <h1>List</h1>
+    <div className="list">
+      <Sidebar />
+      <div className="listcontainer">
+        <Navbar />
+        <Datatable />
+      </div>
     </div>
   );
 };

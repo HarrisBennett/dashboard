@@ -11,11 +11,17 @@ import Face2Icon from '@mui/icons-material/Face2';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import LogoutIcon from '@mui/icons-material/Logout';
+import { Link } from 'react-router-dom';
+import { DarkModeContext } from '../../context/darkModeContext';
+import { useContext } from 'react';
 const Sidebar = () => {
+  const { dispatch } = useContext(DarkModeContext);
   return (
     <div className="sidebar">
       <div className="top">
-        <span className="logo">ADMIN</span>
+        <Link to="/" style={{ textDecoration: 'none' }}>
+          <span className="logo">ADMIN</span>
+        </Link>
       </div>
       <hr />
       <div className="center">
@@ -28,14 +34,19 @@ const Sidebar = () => {
 
           <p className="title">LISTS</p>
 
-          <li className="icon">
-            <Person3OutlinedIcon />
-            <span>Users</span>
-          </li>
-          <li className="icon">
-            <Inventory2OutlinedIcon />
-            <span>Products</span>
-          </li>
+          <Link to="/users" style={{ textDecoration: 'none' }}>
+            <li className="icon">
+              <Person3OutlinedIcon />
+              <span>Users</span>
+            </li>
+          </Link>
+          <Link to="/products" style={{ textDecoration: 'none' }}>
+            <li className="icon">
+              <Inventory2OutlinedIcon />
+
+              <span>Products</span>
+            </li>
+          </Link>
           <li className="icon">
             <BorderColorIcon />
             <span>Orders</span>
@@ -81,8 +92,8 @@ const Sidebar = () => {
         </ul>
       </div>
       <div className="bottom">
-        <div className="but"></div>
-        <div className="but"></div>
+        <div className="but" onClick={() => dispatch({ type: 'LIGHT' })}></div>
+        <div className="but" onClick={() => dispatch({ type: 'DARK' })}></div>
       </div>
     </div>
   );

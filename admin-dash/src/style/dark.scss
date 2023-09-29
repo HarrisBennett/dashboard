@@ -1,0 +1,69 @@
+.dark {
+  background-color: #222;
+  color: white;
+  .chartGrid {
+    stroke: rgba(228, 228, 118, 0.214);
+  }
+  .table {
+    background-color: #111;
+    .tableCell {
+      color: gray;
+    }
+  }
+  .navbar {
+    color: #999;
+    border-color: #333;
+    .search {
+      border-color: gray;
+    }
+  }
+  .sidebar {
+    background-color: #222;
+    border-color: #333;
+    .top {
+      .logo {
+        color: #999;
+      }
+    }
+    hr {
+      border-color: #333;
+    }
+
+    ul {
+      li {
+        &:hover {
+          background-color: #333;
+        }
+      }
+      .icon {
+        color: #999;
+        span {
+          color: #999;
+        }
+      }
+    }
+  }
+  .datatable {
+    .datagrid {
+      color: gray;
+      border: none;
+      .actionbutton {
+        .cellwithview {
+          color: gray;
+          border: none;
+        }
+        .cellwithdelete {
+          color: gray;
+          border: none;
+        }
+        .cellwithstatus {
+          color: gray;
+          border: none;
+        }
+      }
+    }
+  }
+  input {
+    background-color: transparent;
+  }
+}

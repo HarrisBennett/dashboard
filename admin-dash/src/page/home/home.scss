@@ -9,5 +9,14 @@
       padding: 20px;
       gap: 20px;
     }
+    .listcontainer {
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      margin: 20px;
+      padding: 10px;
+      .listtitle {
+        font-size: 20px;
+        color: rgb(104, 104, 104);
+      }
+    }
   }
 }
