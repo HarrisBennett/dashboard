@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Layout from './component/Layout';
+import Dashboard from './page/Dashboard';
+import Users from './page/Users';
+import Transactions from './page/Transactions';
+import Notifications from './page/Notifications';
+import FitnessPlans from './page/FitnessPlans';
+import MealPlans from './page/MealPlans';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/transactions" element={<Transactions />} />
+          <Route path="/notifications" element={<Notifications />} />
+          <Route path="/fitness-plans" element={<FitnessPlans />} />
+          <Route path="/meal-plans" element={<MealPlans />} />
+        </Routes>
+      </Layout>
+    </Router>
   );
-}
+};
 
 export default App;
