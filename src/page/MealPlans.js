@@ -5,5 +5,5 @@ const MealPlans = () => {
         <h1>this is mealplans dashboard</h1>
     </div>)
 }
-
+       
 export default MealPlans;
